@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfluenceHub - Connect Brands with Micro-Influencers</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#6366F1'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20workspace%20with%20clean%20desk%20setup%2C%20soft%20natural%20lighting%2C%20professional%20atmosphere%2C%20white%20and%20blue%20color%20scheme%2C%20geometric%20shapes%2C%20contemporary%20office%20environment%2C%20sleek%20technology%20devices%2C%20organized%20space&width=1920&height=1080&seq=hero001&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-transform duration-300">
+<div class="w-full px-4 sm:px-6 lg:px-12">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-4 lg:space-x-8">
+<div class="font-['Pacifico'] text-xl sm:text-2xl text-primary font-bold">InfluenceHub</div>
+<div class="hidden lg:flex items-center space-x-6">
+<a href="#how-it-works" class="text-gray-700 hover:text-primary transition-colors duration-200">How it Works</a>
+<a href="#for-brands" class="text-gray-700 hover:text-primary transition-colors duration-200">For Brands</a>
+<a href="#for-influencers" class="text-gray-700 hover:text-primary transition-colors duration-200">For Influencers</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary transition-colors duration-200">Success Stories</a>
+</div>
+</div>
+<div class="flex items-center space-x-2 sm:space-x-4">
+<button class="hidden sm:block text-gray-700 hover:text-primary transition-colors whitespace-nowrap !rounded-button px-4 py-2">Sign In</button>
+<button class="bg-primary text-white px-4 sm:px-6 py-2 hover:bg-blue-600 transition-colors whitespace-nowrap !rounded-button text-sm sm:text-base">Get Started</button>
+<button class="lg:hidden text-gray-700 hover:text-primary transition-colors p-2" id="mobile-menu-btn">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</div>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden bg-white border-t border-gray-100" id="mobile-menu">
+<div class="px-4 py-4 space-y-3">
+<a href="#how-it-works" class="block text-gray-700 hover:text-primary transition-colors py-2">How it Works</a>
+<a href="#for-brands" class="block text-gray-700 hover:text-primary transition-colors py-2">For Brands</a>
+<a href="#for-influencers" class="block text-gray-700 hover:text-primary transition-colors py-2">For Influencers</a>
+<a href="#success-stories" class="block text-gray-700 hover:text-primary transition-colors py-2">Success Stories</a>
+<a href="#" class="block text-gray-700 hover:text-primary transition-colors py-2 border-t border-gray-100 mt-3 pt-3">Sign In</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="hero-bg relative min-h-screen flex items-center">
+<div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50"></div>
+<div class="relative w-full px-4 sm:px-6 lg:px-12">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+<div class="space-y-6 lg:space-y-8 text-center lg:text-left">
+<div class="space-y-4 lg:space-y-6">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+Connect Brands with
+<span class="text-primary">Authentic</span>
+Micro-Influencers
+</h1>
+<p class="text-lg sm:text-xl lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+The modern marketplace that seamlessly matches brands with micro-influencers.
+Build authentic partnerships, track performance, and grow together with data-driven insights.
+</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 whitespace-nowrap !rounded-button shadow-lg hover:shadow-xl">
+<span>I'm a Brand</span>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+<button class="border-2 border-primary text-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 whitespace-nowrap !rounded-button">
+<span>I'm an Influencer</span>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-user-star-line"></i>
+</div>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 pt-6 lg:pt-8">
+<div class="text-center lg:text-left">
+<div class="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">52.8K+</div>
+<div class="text-sm sm:text-base text-gray-600">Verified Influencers</div>
+<div class="text-xs text-green-600 font-medium mt-1">↗ Growing daily</div>
+</div>
+<div class="text-center lg:text-left">
+<div class="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">3.2K+</div>
+<div class="text-sm sm:text-base text-gray-600">Partner Brands</div>
+<div class="text-xs text-blue-600 font-medium mt-1">Fortune 500 included</div>
+</div>
+<div class="text-center lg:text-left">
+<div class="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">98.5%</div>
+<div class="text-sm sm:text-base text-gray-600">Success Rate</div>
+<div class="text-xs text-secondary font-medium mt-1">★★★★★ Rated</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-6">Why Choose InfluenceHub?</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+Our platform streamlines the entire collaboration process from discovery to payment,
+ensuring authentic partnerships that drive real results.
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="text-center space-y-6">
+<div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-search-2-line text-2xl text-primary"></i>
+</div>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900">Smart Discovery</h3>
+<p class="text-gray-600 leading-relaxed">
+Advanced filtering by follower count, engagement rate, location, and niche.
+Find the perfect match for your brand in minutes.
+</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-message-3-line text-2xl text-secondary"></i>
+</div>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900">Seamless Communication</h3>
+<p class="text-gray-600 leading-relaxed">
+Real-time messaging with file sharing, read indicators, and conversation history.
+Keep all collaboration details in one place.
+</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-star-line text-2xl text-green-600"></i>
+</div>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900">Transparent Reviews</h3>
+<p class="text-gray-600 leading-relaxed">
+360-degree feedback system with ratings and comments from both sides.
+Build trust and improve future collaborations.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="space-y-6">
+<h2 class="text-4xl font-bold text-gray-900">For Brands</h2>
+<p class="text-xl text-gray-600">
+Scale your influencer marketing with data-driven insights and authentic partnerships.
+</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Advanced Search Filters</h4>
+<p class="text-gray-600">Find influencers by engagement rate, audience demographics, and budget range.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Campaign Management</h4>
+<p class="text-gray-600">Track performance, manage budgets, and analyze ROI in real-time.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Verified Profiles</h4>
+<p class="text-gray-600">Work with authenticated influencers with real audience metrics.</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-4 text-lg font-semibold hover:bg-blue-600 transition-colors whitespace-nowrap !rounded-button">
+Start as Brand
+</button>
+</div>
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20dashboard%20interface%20showing%20analytics%20charts%20and%20graphs%2C%20clean%20minimal%20design%2C%20brand%20management%20tools%2C%20professional%20business%20interface%2C%20blue%20and%20white%20color%20scheme%2C%20data%20visualization%2C%20marketing%20metrics&width=600&height=400&seq=brand001&orientation=landscape"
+alt="Brand Dashboard"
+class="w-full h-96 object-cover object-top rounded-2xl shadow-lg">
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<img src="https://readdy.ai/api/search-image?query=creative%20content%20creator%20workspace%20with%20camera%20equipment%2C%20aesthetic%20flat%20lay%2C%20social%20media%20content%20creation%20setup%2C%20influencer%20lifestyle%2C%20modern%20minimal%20aesthetic%2C%20soft%20lighting%2C%20professional%20photography%20gear&width=600&height=400&seq=influencer001&orientation=landscape"
+alt="Influencer Workspace"
+class="w-full h-96 object-cover object-top rounded-2xl shadow-lg">
+</div>
+<div class="space-y-8 order-1 lg:order-2">
+<div class="space-y-6">
+<h2 class="text-4xl font-bold text-gray-900">For Influencers</h2>
+<p class="text-xl text-gray-600">
+Monetize your influence and build lasting partnerships with premium brands.
+</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Portfolio Showcase</h4>
+<p class="text-gray-600">Display your best work and attract brands in your niche.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Automatic Analytics</h4>
+<p class="text-gray-600">Connect your social accounts for real-time audience insights.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-6 h-6 bg-secondary rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center">
+<i class="ri-check-line text-white text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Secure Payments</h4>
+<p class="text-gray-600">Get paid on time with our integrated payment system.</p>
+</div>
+</div>
+</div>
+<button class="bg-secondary text-white px-8 py-4 text-lg font-semibold hover:bg-indigo-600 transition-colors whitespace-nowrap !rounded-button">
+Join as Influencer
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Success Stories & Metrics</h2>
+<p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+Real results from brands and influencers using our platform to create authentic partnerships
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm text-center">
+<div class="text-3xl md:text-4xl font-bold text-primary mb-2">$2.4M</div>
+<div class="text-gray-600 mb-2">Total Campaign Revenue</div>
+<div class="text-sm text-green-600 font-medium">↗ 145% growth this year</div>
+</div>
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm text-center">
+<div class="text-3xl md:text-4xl font-bold text-secondary mb-2">89%</div>
+<div class="text-gray-600 mb-2">Average Engagement Rate</div>
+<div class="text-sm text-green-600 font-medium">↗ 3x industry average</div>
+</div>
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm text-center">
+<div class="text-3xl md:text-4xl font-bold text-primary mb-2">24hrs</div>
+<div class="text-gray-600 mb-2">Average Response Time</div>
+<div class="text-sm text-blue-600 font-medium">Fast collaboration setup</div>
+</div>
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm text-center">
+<div class="text-3xl md:text-4xl font-bold text-secondary mb-2">4.9/5</div>
+<div class="text-gray-600 mb-2">Platform Rating</div>
+<div class="text-sm text-yellow-600 font-medium">★★★★★ 12.5K reviews</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm">
+<div class="text-center mb-12">
+<h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Featured Success Story</h3>
+<p class="text-gray-600">How EcoLife increased brand awareness by 340% through micro-influencer partnerships</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="flex items-center space-x-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20business%20woman%20in%20modern%20office%20environment%2C%20corporate%20headshot%2C%20clean%20background%2C%20confident%20smile%2C%20business%20attire%2C%20natural%20lighting&width=80&height=80&seq=ecolife001&orientation=squarish"
+alt="Emily Rodriguez"
+class="w-16 h-16 rounded-full object-cover">
+<div>
+<div class="font-semibold text-gray-900">Emily Rodriguez</div>
+<div class="text-gray-600">Marketing Director, EcoLife</div>
+</div>
+</div>
+<blockquote class="text-lg text-gray-700 italic leading-relaxed">
+"We partnered with 25 micro-influencers in the sustainability niche and saw incredible results. 
+Our brand awareness increased by 340%, and we gained 15,000 new customers in just 3 months."
+</blockquote>
+<div class="grid grid-cols-3 gap-4 text-center">
+<div>
+<div class="text-2xl font-bold text-primary">340%</div>
+<div class="text-sm text-gray-600">Brand Awareness</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-green-600">25</div>
+<div class="text-sm text-gray-600">Influencers</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-secondary">15K</div>
+<div class="text-sm text-gray-600">New Customers</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=sustainable%20eco-friendly%20products%20arranged%20beautifully%2C%20natural%20organic%20lifestyle%2C%20green%20plants%2C%20minimal%20aesthetic%2C%20environmental%20consciousness%2C%20clean%20modern%20photography&width=500&height=350&seq=ecolife002&orientation=landscape"
+alt="EcoLife Products"
+class="w-full h-64 md:h-80 object-cover object-top rounded-xl shadow-lg">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-6">What Our Users Say</h2>
+<p class="text-xl text-gray-600">
+Real feedback from brands and influencers using our platform
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-2xl">
+<div class="flex items-center space-x-1 mb-4">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6 leading-relaxed">
+"InfluenceHub transformed our influencer marketing strategy. We found authentic creators
+who truly aligned with our brand values and saw a 300% increase in engagement."
+</p>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+<span class="text-white font-semibold text-sm">SJ</span>
+</div>
+<div>
+<div class="font-semibold text-gray-900">Sarah Johnson</div>
+<div class="text-gray-600 text-sm">Marketing Director, TechFlow</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-2xl">
+<div class="flex items-center space-x-1 mb-4">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6 leading-relaxed">
+"As a micro-influencer, this platform gave me access to premium brands I never
+thought I could work with. The payment system is reliable and the support is amazing."
+</p>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+<span class="text-white font-semibold text-sm">MC</span>
+</div>
+<div>
+<div class="font-semibold text-gray-900">Maria Chen</div>
+<div class="text-gray-600 text-sm">Lifestyle Influencer, 45K followers</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-2xl">
+<div class="flex items-center space-x-1 mb-4">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6 leading-relaxed">
+"The search filters are incredibly detailed. We can find influencers by exact
+demographics and engagement rates. It's like having a marketing team in a platform."
+</p>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+<span class="text-white font-semibold text-sm">DK</span>
+</div>
+<div>
+<div class="font-semibold text-gray-900">David Kim</div>
+<div class="text-gray-600 text-sm">Brand Manager, EcoStyle</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-primary">
+<div class="max-w-4xl mx-auto text-center px-6 lg:px-12">
+<h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+Ready to Start Your Influencer Journey?
+</h2>
+<p class="text-xl text-blue-100 mb-12 leading-relaxed">
+Join thousands of brands and influencers creating authentic partnerships every day.
+Get started in less than 5 minutes.
+</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-white text-primary px-8 py-4 text-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2 whitespace-nowrap !rounded-button">
+<span>Join as Brand</span>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-building-line"></i>
+</div>
+</button>
+<button class="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary transition-colors flex items-center justify-center space-x-2 whitespace-nowrap !rounded-button">
+<span>Join as Influencer</span>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-user-star-line"></i>
+</div>
+</button>
+</div>
+<p class="text-blue-200 text-sm mt-8">
+No setup fees • 14-day free trial • Cancel anytime
+</p>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="font-['Pacifico'] text-2xl font-bold">InfluenceHub</div>
+<p class="text-gray-400 leading-relaxed">
+The modern marketplace connecting brands with authentic micro-influencers for
+meaningful partnerships.
+</p>
+<div class="flex items-center space-x-4">
+<div class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-twitter-x-line"></i>
+</div>
+</div>
+<div class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</div>
+<div class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-semibold text-lg">Platform</h4>
+<div class="space-y-3">
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">How it Works</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Pricing</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Success Stories</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">API Documentation</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-semibold text-lg">Resources</h4>
+<div class="space-y-3">
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Help Center</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Community</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Webinars</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-semibold text-lg">Company</h4>
+<div class="space-y-3">
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Careers</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Press Kit</a>
+<a href="#" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<p class="text-gray-400 text-sm">
+© 2024 InfluenceHub. All rights reserved.
+</p>
+<div class="flex items-center space-x-6 text-sm">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="navigation-mobile">
+document.addEventListener('DOMContentLoaded', function() {
+const nav = document.querySelector('nav');
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+let lastScrollY = window.scrollY;
+let isMenuOpen = false;
+
+// Mobile menu toggle
+if (mobileMenuBtn && mobileMenu) {
+mobileMenuBtn.addEventListener('click', function() {
+isMenuOpen = !isMenuOpen;
+if (isMenuOpen) {
+mobileMenu.classList.remove('hidden');
+mobileMenuBtn.querySelector('i').className = 'ri-close-line text-xl';
+} else {
+mobileMenu.classList.add('hidden');
+mobileMenuBtn.querySelector('i').className = 'ri-menu-line text-xl';
+}
+});
+
+// Close mobile menu when clicking on links
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+mobileMenuBtn.querySelector('i').className = 'ri-menu-line text-xl';
+isMenuOpen = false;
+});
+});
+}
+
+// Smart navigation hide/show on scroll
+const throttle = (func, limit) => {
+let inThrottle;
+return function() {
+const args = arguments;
+const context = this;
+if (!inThrottle) {
+func.apply(context, args);
+inThrottle = true;
+setTimeout(() => inThrottle = false, limit);
+}
+}
+};
+
+const handleScroll = throttle(() => {
+const currentScrollY = window.scrollY;
+if (currentScrollY > lastScrollY && currentScrollY > 100 && !isMenuOpen) {
+nav.style.transform = 'translateY(-100%)';
+} else {
+nav.style.transform = 'translateY(0)';
+}
+lastScrollY = currentScrollY;
+}, 100);
+
+window.addEventListener('scroll', handleScroll);
+
+// Close mobile menu on resize
+window.addEventListener('resize', function() {
+if (window.innerWidth >= 1024 && isMenuOpen) {
+mobileMenu.classList.add('hidden');
+mobileMenuBtn.querySelector('i').className = 'ri-menu-line text-xl';
+isMenuOpen = false;
+}
+});
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+const navHeight = document.querySelector('nav').offsetHeight;
+const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+
+// Add intersection observer for active nav states
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+const observerOptions = {
+root: null,
+rootMargin: '-20% 0px -80% 0px',
+threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+navLinks.forEach(link => {
+link.classList.remove('text-primary', 'font-semibold');
+link.classList.add('text-gray-700');
+if (link.getAttribute('href') === `#${entry.target.id}`) {
+link.classList.remove('text-gray-700');
+link.classList.add('text-primary', 'font-semibold');
+}
+});
+}
+});
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+});
+</script>
+<script id="performance-optimizations">
+document.addEventListener('DOMContentLoaded', function() {
+// Lazy load images for better performance
+const images = document.querySelectorAll('img[src*="readdy.ai"]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const img = entry.target;
+img.style.opacity = '0';
+img.style.transition = 'opacity 0.3s ease-in-out';
+
+const tempImg = new Image();
+tempImg.onload = function() {
+img.src = tempImg.src;
+img.style.opacity = '1';
+};
+tempImg.src = img.getAttribute('src');
+observer.unobserve(img);
+}
+});
+}, {
+rootMargin: '50px 0px',
+threshold: 0.01
+});
+
+images.forEach(img => imageObserver.observe(img));
+
+// Enhanced button interactions with performance optimization
+const ctaButtons = document.querySelectorAll('button');
+const buttonInteraction = {
+mouseEnter: function() {
+this.style.transform = 'translateY(-2px)';
+this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+this.style.transition = 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
+},
+mouseLeave: function() {
+this.style.transform = 'translateY(0)';
+this.style.boxShadow = 'none';
+}
+};
+
+ctaButtons.forEach(button => {
+button.addEventListener('mouseenter', buttonInteraction.mouseEnter);
+button.addEventListener('mouseleave', buttonInteraction.mouseLeave);
+});
+
+// Preload critical resources
+const preloadLinks = [
+'https://fonts.googleapis.com/css2?family=Pacifico&display=swap',
+'https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css'
+];
+
+preloadLinks.forEach(href => {
+const link = document.createElement('link');
+link.rel = 'preload';
+link.as = 'style';
+link.href = href;
+document.head.appendChild(link);
+});
+
+// Add scroll-triggered animations
+const animateOnScroll = document.querySelectorAll('.animate-on-scroll, [class*="space-y"], .grid > div');
+const scrollObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+entry.target.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+scrollObserver.unobserve(entry.target);
+}
+});
+}, {
+rootMargin: '0px 0px -100px 0px',
+threshold: 0.1
+});
+
+animateOnScroll.forEach(el => {
+el.style.opacity = '0';
+el.style.transform = 'translateY(20px)';
+scrollObserver.observe(el);
+});
+});
+</script>
+</body>
+</html>
